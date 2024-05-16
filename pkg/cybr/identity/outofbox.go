@@ -17,7 +17,7 @@ import (
 
 func checkURL(client api.Client, req requests.AdvanceAuthentication, c chan string) {
 	for {
-		identityTenant := fmt.Sprintf("https://%s.id.cyberark.cloud", client.TenantID)
+		identityTenant := fmt.Sprintf("https://%s.my.idaptive.app", client.TenantID)
 		url := fmt.Sprintf("%s/Security/AdvanceAuthentication", identityTenant)
 
 		headers := http.Header{}

@@ -10,7 +10,7 @@ import (
 
 // SignOutSession signs out of the current Identity session
 func SignOutSession(c api.Client) error {
-	identityTenant := fmt.Sprintf("https://%s.id.cyberark.cloud", c.TenantID)
+	identityTenant := fmt.Sprintf("https://%s.my.idaptive.app", c.TenantID)
 	url := fmt.Sprintf("%s/UserMgmt/SignOutCurrentSession", identityTenant)
 
 	headers := http.Header{}
