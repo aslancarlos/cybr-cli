@@ -16,7 +16,7 @@ var identityTenant string
 // StartAuthentication starts the authentication process
 func StartAuthentication(c api.Client, req requests.StartAuthentication, podFqdn string) (*responses.Authentication, error) {
 	if podFqdn == "" {
-		identityTenant = fmt.Sprintf("https://%s.my.idaptive.app", req.TenantID)
+		identityTenant = fmt.Sprintf("https://%s.id.cyberark.cloud", req.TenantID)
 	} else {
 		identityTenant = fmt.Sprintf("https://%s", podFqdn)
 	}

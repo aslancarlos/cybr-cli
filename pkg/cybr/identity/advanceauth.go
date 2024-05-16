@@ -13,7 +13,7 @@ import (
 
 // AdvanceAuthentication will answer challenges from CyberArk Identity
 func AdvanceAuthentication(c api.Client, req requests.AdvanceAuthentication) (*responses.Authentication, error) {
-	identityTenant := fmt.Sprintf("https://%s.my.idaptive.app", c.TenantID)
+	identityTenant := fmt.Sprintf("https://%s.id.cyberark.cloud", c.TenantID)
 	url := fmt.Sprintf("%s/Security/AdvanceAuthentication", identityTenant)
 
 	headers := http.Header{}
